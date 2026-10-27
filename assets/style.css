@@ -1,0 +1,121 @@
+:root {
+    --teal: #0d9488;
+    --teal-dark: #0f766e;
+    --mint: #ecfdf5;
+    --ink: #1e293b;
+    --muted: #64748b;
+}
+
+body {
+    background: #f1f7f6;
+    color: var(--ink);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main { flex: 1; }
+
+/* Tombol utama bernuansa teal */
+.btn-primary {
+    --bs-btn-bg: var(--teal);
+    --bs-btn-border-color: var(--teal);
+    --bs-btn-hover-bg: var(--teal-dark);
+    --bs-btn-hover-border-color: var(--teal-dark);
+    --bs-btn-active-bg: var(--teal-dark);
+    --bs-btn-active-border-color: var(--teal-dark);
+    --bs-btn-disabled-bg: var(--teal);
+    --bs-btn-disabled-border-color: var(--teal);
+}
+
+/* Navbar */
+.navbar-apotek { background: linear-gradient(135deg, #0f766e, #0d9488); }
+.navbar-apotek .nav-link {
+    color: rgba(255,255,255,.85);
+    border-radius: 8px;
+    padding: .5rem .85rem;
+    font-weight: 500;
+}
+.navbar-apotek .nav-link:hover { color: #fff; background: rgba(255,255,255,.12); }
+.navbar-apotek .nav-link.active { color: #fff; background: rgba(255,255,255,.22); }
+.brand-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.2);
+    font-size: 1.1rem;
+}
+.brand-icon-lg {
+    display: inline-grid;
+    place-items: center;
+    width: 64px; height: 64px;
+    border-radius: 18px;
+    background: var(--mint);
+    color: var(--teal);
+    font-size: 2rem;
+}
+
+/* Kartu & tabel */
+.card-app {
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(15,118,110,.08);
+    overflow: hidden;
+}
+.card-app .card-header {
+    background: #fff;
+    border-bottom: 1px solid #e2ece9;
+    padding: 1rem 1.25rem;
+}
+.table thead th {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--muted);
+    background: #f8fbfa;
+    border-bottom: 1px solid #e2ece9;
+    font-weight: 600;
+    padding: .9rem 1rem;
+}
+.table td { padding: .85rem 1rem; border-color: #eef4f2; }
+.table-hover tbody tr:hover { background: var(--mint); }
+
+/* Form */
+.form-label { font-weight: 600; font-size: .9rem; color: #334155; }
+.form-control, .form-select {
+    border-radius: 10px;
+    padding: .6rem .85rem;
+    border-color: #d7e5e1;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 .2rem rgba(13,148,136,.15);
+}
+
+/* Kartu statistik */
+.stat-card {
+    border-radius: 16px;
+    padding: 1.4rem;
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(0,0,0,.08);
+    transition: transform .2s ease;
+}
+.stat-card:hover { transform: translateY(-4px); }
+.stat-teal  { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+.stat-blue  { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+.stat-amber { background: linear-gradient(135deg, #fbbf24, #d97706); }
+.stat-card .label {
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    opacity: .85;
+    font-weight: 600;
+}
+.stat-card .value { font-size: 2.1rem; font-weight: 700; line-height: 1.1; }
+.stat-card .icon  { font-size: 2.6rem; opacity: .35; }
+
+/* Lain-lain */
+.empty-state { padding: 2.5rem 1rem; color: var(--muted); }
+.login-wrap { min-height: calc(100vh - 160px); display: grid; place-items: center; }
+.login-card { width: 100%; max-width: 420px; }
